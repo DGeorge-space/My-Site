@@ -1,0 +1,58 @@
+/*Mixins:
+
+not dissimilar to functions in a programming language
+
+N.B declaration must come before use!
+
+we can use the code for all of the different browsers, in the mixin
+this means we can just use a file full of mixins!!!! WE never need to use this again!
+
+*/
+/*Media queries and mixins: 
+
+We can make media queries much easier to work with using mixins
+
+
+We dont need to re write all of the CSS, can name keywords that can be reused as
+media queries
+*/
+/*Can nest a rule in sass, koala will create the code*/
+.site-header nav ul {
+  padding: 0;
+  margin: 0; }
+.site-header nav li {
+  list-style: none;
+  float: left;
+  margin-right: 10px;
+  /* V powerful, now all our stylings are referred to in a mixin*/ }
+  @media only screen and (max-width: 480px) {
+    .site-header nav li {
+      float: none;
+      margin-right: 0;
+      margin-bottom: 2px; } }
+  @media only screen and (min-width: 1100px) {
+    .site-header nav li {
+      margin-right: 50px; } }
+.site-header nav a {
+  display: block;
+  padding: 10px;
+  background-color: #95a071;
+  color: #FFF;
+  text-decoration: none; }
+
+html {
+  color: #95a071; }
+
+.group:before, .site-header nav ul:before,
+.group:after,
+.site-header nav ul:after {
+  content: "";
+  display: table; }
+
+.group:after, .site-header nav ul:after {
+  clear: both; }
+
+.group, .site-header nav ul {
+  zoom: 1; }
+
+/*# sourceMappingURL=styles.css.map */

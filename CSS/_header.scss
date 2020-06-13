@@ -1,0 +1,35 @@
+
+/*Can nest a rule in sass, koala will create the code*/
+.site-header nav {
+	
+	ul {
+		padding: 0;
+		margin: 0;
+		@extend .group;
+	}
+
+	li {
+		list-style: none;
+		float: left;
+		margin-right: 10px;
+
+		/* V powerful, now all our stylings are referred to in a mixin*/
+		@include bp-babyBear{
+			float: none;
+			margin-right: 0;
+			margin-bottom: 2px;;
+		}
+		@include bp-papaBear{
+			margin-right: 50px;
+		}
+	}
+
+	a {
+		display: block;
+		padding: 10px;
+		background-color: $keyColour;
+		color: #FFF;
+		text-decoration: none;
+	}
+
+}

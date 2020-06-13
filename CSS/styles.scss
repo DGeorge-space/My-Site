@@ -1,0 +1,23 @@
+$keyColour: rgb(149, 160, 113);
+
+@import 'mixins';
+@import 'header';
+
+
+html{
+    color: $keyColour;
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+}
