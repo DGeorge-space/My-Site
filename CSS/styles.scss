@@ -1,14 +1,71 @@
-$keyColour: rgb(149, 160, 113);
+/*Color Scheme: */
+
+$keyColour1:#F2D8C9;
+$keyColour2:#260B01;
+$keyColour3:#73564C;
+$keyColour4:#BF9484;
+$keyColour5:#D9BEB4;
+
+$background: $keyColour1;
+$text: $keyColour2;
+
 
 @import 'mixins';
 @import 'header';
 
 
 html{
-    color: $keyColour;
+    color: $text;
+    background-color: $background;
+    @include bp-babyBear{
+        font-size: .8em;
+    }
+    @include bp-papaBear{
+        font-size: 1.4em;
+    }
+
 }
 
-.group:before,
+.site-header h1{
+    font-size: 230%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: $keyColour3;
+    text-align: center;
+}
+
+.container{
+    max-width: 75%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.content-area {
+    background-color: lighten($keyColour5, 15%);
+    float: center;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;        
+  }
+
+  .main-area {
+    width: 66%;
+    float: left;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+  .sidebar{
+      width: 34%;
+      float: right;
+      box-sizing: border-box;
+      
+  }
+
+
+/*Clear fix*/ 
+  .group:before,
 .group:after {
   content: "";
   display: table;
