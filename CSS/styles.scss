@@ -1,22 +1,23 @@
 /*Color Scheme: */
 
-$keyColour1:#f3f2f2;
+$keyColour1:#ffffff;
 $keyColour2:#777777;
-$keyColour3:#928484;
-$keyColour4:#BF9484;
-$keyColour5:#D9BEB4;
+$keyColour3:#ffffff;
+$keyColour4:#fdfdfd;
+$keyColour5:#ffffff;
 
 $background: $keyColour1;
 $text: $keyColour2;
 
 
 @import 'mixins';
-@import 'header';
+
 
 
 html{
     color: $text;
-    background-color: #d4c7bb;
+    background-color: #e2e2e2;
+
     @include bp-babyBear{
         font-size: .8em;
     }
@@ -35,54 +36,113 @@ html{
 }
 
 .container{
-    max-width: 75%;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    max-width: 100%;
+    
+  
+    padding-left: 0px;
+    padding-right: 0px;
+    box-sizing: border-box;
     @include bp-babyBear{
-      max-width: 100%;
+    
       padding-left: 0px;
       padding-right: 0px;
     }
 }
-.content-area {
-    width: 66%;
-    float: right;
-    display: flex;
-    justify-content: right;
-    background-color: lighten($background, 15%);
-    float: center;
-    padding-bottom: 40px;
-    padding-top: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
-    
-    @include boxFomatting;
 
-    box-sizing: border-box;        
-  }
 
   .main-area {
-    width: 66%;
-    float: left;
-    padding-right: 40px;
-    box-sizing: border-box;
+      width: 70%;
+      float: right;
+
+      background-color: lighten($background, 15%);
+      
+      padding-bottom: 40px;
+      padding-left: 10px;
+      
+      padding-right: 10px;
+      
+      @include boxFomatting;
+  
+      box-sizing: border-box;        
+    
     @include bp-babyBear{
       width: 100%;
       padding-left: 5px;
     }
   }
-  .sidebar{
-      width: 34%;
-      float: right;
+  .menu{
+      float: left;
+      width: 30%;
+      margin: 0 0px;
+      padding-right: 20px;
       box-sizing: border-box;
-      @include bp-babyBear{
-        width: 100%;
-        float: left;
-      }
+      @extend .group;
+  
       
+    ul{
+      margin: 0 0;
+    }
+  
+    li{
+      list-style: none;
+      float: left;
+      width: 100%;
+     
+      
+    }
+    a{
+      display: block;
+      color: #fff;
+      text-align: center;
+      
+      padding: 10px 20px;
+      background-color: #365267;
+      transition-property: color, background-color;
+      transition-duration: .7s;
+      @include boxFomatting;
+  
+    }
+    a:hover{
+      background-color: #fff;
+      color: #365267;
+    }
+    .read-more{
+      text-decoration: underline;
+      color: blue;
+    
+    }
+    
+    .read-more:hover{
+      text-decoration: none;
+    }
+    .toggle-btn{
+      display: none ;
+    }
+    .full-text .toggle-btn-visible{
+      display: block;
+      @include bp-babyBear{
+        .toggle-btn-visible{
+          display: block;
+        }
+        
+        .toggle-target-hidden{
+          display: block;
+        }
+        
+        .toggle-target-expanded{
+          display: none;
+        }
+      }
+    }
+    
+    .full-text .toggle-target-hidden{
+      display: none;
+    }
+    
+    .full-text toggle-target-expanded{
+      display: block;
+    }
   }
-
 
 /*Clear fix*/ 
   .group:before,
