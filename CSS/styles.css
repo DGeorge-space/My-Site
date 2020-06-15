@@ -61,20 +61,47 @@ html {
   @media only screen and (max-width: 540px) {
     .main-area {
       width: 100%;
-      padding-left: 5px; } }
+      padding-left: 5%; } }
 
+/* Site nav and menu bar */
 .menu {
   float: left;
   width: 30%;
   margin: 0 0px;
   padding-right: 20px;
   box-sizing: border-box; }
+  @media only screen and (max-width: 540px) {
+    .menu {
+      min-width: 100%; } }
   .menu ul {
-    margin: 0 0; }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+    @media only screen and (min-width: 1100px) {
+      .menu ul {
+        padding-right: 10px; } }
+    @media only screen and (max-width: 540px) {
+      .menu ul {
+        display: block;
+        margin: 0;
+        padding-right: 0;
+        text-align: center;
+        min-width: 100%;
+        color: blue; } }
   .menu li {
     list-style: none;
     float: left;
     width: 100%; }
+    @media only screen and (max-width: 540px) {
+      .menu li {
+        text-align: center;
+        float: center;
+        width: 20%;
+        padding-right: 8px;
+        box-sizing: border-box; } }
+    @media only screen and (min-width: 1100px) {
+      .menu li {
+        margin-right: 0; } }
   .menu a {
     display: block;
     color: #fff;
@@ -83,35 +110,48 @@ html {
     background-color: #365267;
     transition-property: color, background-color;
     transition-duration: .7s;
+    box-sizing: border-box;
     box-shadow: 15px 15px 10px 3px rgba(0, 0, 0, 0.2);
     border-bottom: 3px solid #777777;
     border-right: 3px solid #777777; }
     @media only screen and (max-width: 540px) {
       .menu a {
         box-shadow: none; } }
+    @media only screen and (max-width: 540px) {
+      .menu a {
+        padding: 10px 5%; } }
   .menu a:hover {
     background-color: #fff;
     color: #365267; }
-  .menu .read-more {
-    text-decoration: underline;
-    color: blue; }
-  .menu .read-more:hover {
-    text-decoration: none; }
-  .menu .toggle-btn {
-    display: none; }
-  .menu .full-text .toggle-btn-visible {
-    display: block; }
-    @media only screen and (max-width: 540px) {
-      .menu .full-text .toggle-btn-visible .toggle-btn-visible {
-        display: block; }
-      .menu .full-text .toggle-btn-visible .toggle-target-hidden {
-        display: block; }
-      .menu .full-text .toggle-btn-visible .toggle-target-expanded {
-        display: none; } }
-  .menu .full-text .toggle-target-hidden {
-    display: none; }
-  .menu .full-text toggle-target-expanded {
-    display: block; }
+
+/*Show/ hide button*/
+.read-more {
+  text-decoration: underline;
+  color: blue; }
+
+.read-more:hover {
+  text-decoration: none; }
+
+.toggle-btn {
+  display: block; }
+
+.full-text {
+  display: block; }
+
+.toggle-btn-visible {
+  display: block; }
+
+.toggle-target-hidden {
+  display: none; }
+  .toggle-target-hidden .main-area {
+    width: 100%;
+    float: center; }
+
+.toggle-target-expanded {
+  display: block; }
+  .toggle-target-expanded .main-area {
+    width: 70%;
+    float: right; }
 
 /*Clear fix*/
 .group:before, .menu:before,

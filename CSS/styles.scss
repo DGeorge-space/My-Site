@@ -6,6 +6,12 @@ $keyColour3:#ffffff;
 $keyColour4:#fdfdfd;
 $keyColour5:#ffffff;
 
+$smallScreenSize: 540px;
+$bigScreenSize: 1100px;
+
+
+
+
 $background: $keyColour1;
 $text: $keyColour2;
 
@@ -17,6 +23,7 @@ $text: $keyColour2;
 html{
     color: $text;
     background-color: #e2e2e2;
+    
 
     @include bp-babyBear{
         font-size: .8em;
@@ -67,9 +74,11 @@ html{
     
     @include bp-babyBear{
       width: 100%;
-      padding-left: 5px;
+      padding-left: 5%;
     }
   }
+
+  /* Site nav and menu bar */
   .menu{
       float: left;
       width: 30%;
@@ -77,16 +86,45 @@ html{
       padding-right: 20px;
       box-sizing: border-box;
       @extend .group;
+      @include bp-babyBear{
+        min-width: 100%;
+        
+      }
   
       
     ul{
-      margin: 0 0;
+      margin: 0 ;
+      padding: 0;
+      box-sizing: border-box;
+      @include bp-papaBear{
+        padding-right: 10px;
+      }
+      @include bp-babyBear{
+        display: block;
+        margin: 0;
+        padding-right: 0;
+        text-align: center;
+        min-width: 100%;
+        color: blue;
+      }
     }
   
     li{
       list-style: none;
       float: left;
       width: 100%;
+      @include bp-babyBear{
+        text-align: center;
+        float: center;
+        width: 20%;
+        padding-right: 8px;
+        box-sizing: border-box;
+
+      }
+      @include bp-papaBear{
+        
+        margin-right: 0;
+      }
      
       
     }
@@ -99,13 +137,24 @@ html{
       background-color: #365267;
       transition-property: color, background-color;
       transition-duration: .7s;
+      box-sizing: border-box;
       @include boxFomatting;
+      @include bp-babyBear{
+        padding: 10px 5%;
+      }
+
   
     }
     a:hover{
       background-color: #fff;
       color: #365267;
     }
+  }
+
+
+
+    /*Show/ hide button*/
+
     .read-more{
       text-decoration: underline;
       color: blue;
@@ -116,33 +165,35 @@ html{
       text-decoration: none;
     }
     .toggle-btn{
-      display: none ;
+      display: block ;
     }
-    .full-text .toggle-btn-visible{
+    .full-text {
       display: block;
-      @include bp-babyBear{
-        .toggle-btn-visible{
-          display: block;
-        }
-        
-        .toggle-target-hidden{
-          display: block;
-        }
-        
-        .toggle-target-expanded{
-          display: none;
-        }
+    }
+      
+    .toggle-btn-visible{
+      display: block;
+    }
+    
+    .toggle-target-hidden{
+      display: none;
+      .main-area{
+        width: 100%;
+        float: center;
       }
     }
     
-    .full-text .toggle-target-hidden{
-      display: none;
-    }
-    
-    .full-text toggle-target-expanded{
+    .toggle-target-expanded{
       display: block;
+      .main-area{
+        width: 70%;
+        float: right;
+      }
     }
-  }
+      
+    
+
+  
 
 /*Clear fix*/ 
   .group:before,
