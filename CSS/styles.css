@@ -18,34 +18,56 @@ We dont need to re write all of the CSS, can name keywords that can be reused as
 media queries
 */
 /*Can nest a rule in sass, koala will create the code*/
-.site-header nav ul {
-  padding: 0;
-  margin: 0;
-  float: none; }
-.site-header nav li {
-  list-style: none;
-  float: left;
-  margin-right: 10px;
-  /* V powerful, now all our stylings are referred to in a mixin*/ }
-  @media only screen and (max-width: 480px) {
-    .site-header nav li {
-      float: none;
-      margin-right: 0;
-      margin-bottom: 2px; } }
-  @media only screen and (min-width: 1100px) {
-    .site-header nav li {
-      margin-right: 50px; } }
-.site-header nav a {
-  display: block;
-  padding: 10px;
-  background-color: #b3968c;
-  color: #260B01;
-  text-decoration: none; }
+.site-header nav {
+  text-align: center; }
+  .site-header nav ul {
+    text-align: left;
+    width: 34%;
+    padding: 20px;
+    float: left; }
+  .site-header nav li {
+    list-style: none;
+    float: left;
+    margin-right: 15%;
+    box-sizing: border-box;
+    box-shadow: 15px 15px 10px 3px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #777777;
+    border-right: 3px solid #777777;
+    /* V powerful, now all our stylings are referred to in a mixin*/ }
+    @media only screen and (max-width: 540px) {
+      .site-header nav li {
+        box-shadow: none; } }
+    @media only screen and (max-width: 540px) {
+      .site-header nav li {
+        float: left;
+        margin-right: none;
+        margin-bottom: 2px; } }
+    @media only screen and (min-width: 1100px) {
+      .site-header nav li {
+        margin-right: 5%; } }
+  .site-header nav a:hover {
+    background-color: #333333;
+    color: #f3f2f2; }
+  .site-header nav a {
+    display: block;
+    padding: 10px;
+    background-color: white;
+    color: #777777;
+    text-decoration: none; }
+  .site-header nav .read-more {
+    text-decoration: underline;
+    color: blue; }
+  .site-header nav .toggle-btn {
+    display: none; }
+  .site-header nav .toggle-target-hidden {
+    display: none; }
+  .site-header nav .toggle-target-expanded {
+    display: block; }
 
 html {
-  color: #260B01;
-  background-color: #F2D8C9; }
-  @media only screen and (max-width: 480px) {
+  color: #777777;
+  background-color: #d4c7bb; }
+  @media only screen and (max-width: 540px) {
     html {
       font-size: .8em; } }
   @media only screen and (min-width: 1100px) {
@@ -56,7 +78,7 @@ html {
   font-size: 230%;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
-  color: #73564C;
+  color: #f3f2f2;
   text-align: center; }
 
 .container {
@@ -64,26 +86,49 @@ html {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px; }
+  @media only screen and (max-width: 540px) {
+    .container {
+      max-width: 100%;
+      padding-left: 0px;
+      padding-right: 0px; } }
 
 .content-area {
-  background-color: #f3eae7;
+  width: 66%;
+  float: right;
+  display: flex;
+  justify-content: right;
+  background-color: white;
   float: center;
   padding-bottom: 40px;
   padding-top: 40px;
   padding-left: 10px;
   padding-right: 10px;
+  box-shadow: 15px 15px 10px 3px rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid #777777;
+  border-right: 3px solid #777777;
   box-sizing: border-box; }
+  @media only screen and (max-width: 540px) {
+    .content-area {
+      box-shadow: none; } }
 
 .main-area {
   width: 66%;
   float: left;
   padding-right: 40px;
   box-sizing: border-box; }
+  @media only screen and (max-width: 540px) {
+    .main-area {
+      width: 100%;
+      padding-left: 5px; } }
 
 .sidebar {
   width: 34%;
   float: right;
   box-sizing: border-box; }
+  @media only screen and (max-width: 540px) {
+    .sidebar {
+      width: 100%;
+      float: left; } }
 
 /*Clear fix*/
 .group:before, .site-header nav ul:before,

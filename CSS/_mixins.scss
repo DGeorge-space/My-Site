@@ -20,6 +20,18 @@ this means we can just use a file full of mixins!!!! WE never need to use this a
   	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
 }
 
+@mixin boxFomatting {
+
+    box-shadow: 15px 15px 10px 3px rgba($color: #000000, $alpha: .2);
+    border-bottom: 3px solid $keyColour2;
+    border-right: 3px solid $keyColour2;
+    @include bp-babyBear{
+        box-shadow: none ;
+    }
+}
+
+
+
 /*Media queries and mixins: 
 
 We can make media queries much easier to work with using mixins
@@ -30,7 +42,7 @@ media queries
 */
 
 @mixin bp-babyBear {
-    @media only screen and (max-width: 480px){
+    @media only screen and (max-width: 540px){
         @content;
     }
         

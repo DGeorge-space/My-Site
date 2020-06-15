@@ -1,8 +1,8 @@
 /*Color Scheme: */
 
-$keyColour1:#F2D8C9;
-$keyColour2:#260B01;
-$keyColour3:#73564C;
+$keyColour1:#f3f2f2;
+$keyColour2:#777777;
+$keyColour3:#928484;
 $keyColour4:#BF9484;
 $keyColour5:#D9BEB4;
 
@@ -16,7 +16,7 @@ $text: $keyColour2;
 
 html{
     color: $text;
-    background-color: $background;
+    background-color: #d4c7bb;
     @include bp-babyBear{
         font-size: .8em;
     }
@@ -30,7 +30,7 @@ html{
     font-size: 230%;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    color: $keyColour3;
+    color: $keyColour1;
     text-align: center;
 }
 
@@ -39,14 +39,26 @@ html{
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
+    @include bp-babyBear{
+      max-width: 100%;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
 }
 .content-area {
-    background-color: lighten($keyColour5, 15%);
+    width: 66%;
+    float: right;
+    display: flex;
+    justify-content: right;
+    background-color: lighten($background, 15%);
     float: center;
     padding-bottom: 40px;
     padding-top: 40px;
     padding-left: 10px;
     padding-right: 10px;
+    
+    @include boxFomatting;
+
     box-sizing: border-box;        
   }
 
@@ -55,11 +67,19 @@ html{
     float: left;
     padding-right: 40px;
     box-sizing: border-box;
+    @include bp-babyBear{
+      width: 100%;
+      padding-left: 5px;
+    }
   }
   .sidebar{
       width: 34%;
       float: right;
       box-sizing: border-box;
+      @include bp-babyBear{
+        width: 100%;
+        float: left;
+      }
       
   }
 

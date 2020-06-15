@@ -7,12 +7,15 @@
         <link rel="stylesheet" href="css/styles.css">
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/cycle2.js"></script>
+        <script type="text/javascript" src="js/declarativeToggle.js"></script>
     </head>
     <body>
         <header class="site-header">  
             
             <h1>Welcome to my Site!</h1>
+            <span data-toggle-target= ".full-text" data-toggle-text="Hide the full text" class="toggle-btn read-more">Show the menu</span> </p>
             <nav>
+            <div class="full-text">
             <ul>
                 
                 <li><a href="#"> Home</a></li>
@@ -22,6 +25,7 @@
                 <li><a href='#'>Contact</a></li>
 
             </ul>
+            </div><!--full text-->
             </nav>
         </header>
     <div class="container">
