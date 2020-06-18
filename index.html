@@ -4,26 +4,40 @@
         <meta charset="utf-8">
         <title> </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/styles.css">
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/cycle2.js"></script>
-        <script type="text/javascript" src="js/declarativeToggle.js"></script>
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <script type="text/javascript" src="assets/js/jquery.js"></script>
+        <script type="text/javascript" src="assets/js/cycle2.js"></script>
+        <script type="text/javascript" src="assets/js/declarativeToggle.js"></script>
     </head>
 
     <body>
+        <div class="bgDecorations">
+            <div class="btmLayer">
+
+            </div>
+
+            <div class="midLayer">
+                <img src="Assets/images/bg.png">
+            </div>
+
+            <div class="topLayer">
+
+            </div>
+
+        </div>
+        <div class="siteContainer">
         <header class="site-header">  
             
-            <h1>Welcome to my Site!</h1>
-            <span data-toggle-target= ".full-text" data-toggle-text="Hide" class="toggle-btn">Menu</span>
-        </header>
-        <div class="container group">
+            <h1>_Have a look around <div class="nextChar">{</div></h1>
 
+            <span data-toggle-target= ".menu" data-toggle-text="." class="toggle-btn">.</span>
+        </header>
+        <div class="container group"> 
+<!-- container for menu and main text box -->
             <div class="menu">
                 
                 <nav class="full-text">
-                
 
-                
                     <ul class="group">
                         
                         <li><a href="#"> Home</a></li>
@@ -38,10 +52,17 @@
                 </nav>
             </div> <!--menu-->
 
-            <div class='main-area group'>
-                <p>All Work and no Play makes Daniel a dull boy. All Work and no Play makes Daniel a dull boy. All Work and no Play makes Daniel a dull boy. All Work and no Play makes Daniel a dull boy.All Work and no Play makes Daniel a dull boy.All Work and no Play makes Daniel a dull boy.</p>
+            <div class='main-area'>
+                <div class="splitleft group">
+                    <p>Design and Code is my passion!</p>
+                </div> <!--split left-->
+
+                <div class="splitright group">
+              
+            </div> <!-- split right-->
             </div> <!--main-area-->
 
         </div> <!-- container-->
+    </div> <!-- siteContainer-->
     </body>
 </html>
